@@ -1,0 +1,107 @@
+﻿@model EmployeeManagement.Models.Domain.Salary
+
+@{
+    ViewData["Title"] = "ViewSlip";
+}
+
+<h1>ViewSlip</h1>
+
+<div>
+    <h4>Salary</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalaryId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalaryId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HRGenerated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HRGenerated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AdminApproved)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AdminApproved)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BasicSalary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BasicSalary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HRA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HRA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OtherAllowence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OtherAllowence)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TDS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TDS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalSalary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalSalary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalMonthDays)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalMonthDays)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalLeaves)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalLeaves)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FinalSalary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FinalSalary)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="ViewProfile">Back to profile</a>
+</div>

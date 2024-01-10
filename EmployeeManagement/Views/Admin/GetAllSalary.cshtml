@@ -1,0 +1,119 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Domain.Salary>
+
+@{
+    ViewData["Title"] = "GetAllSalary";
+}
+
+<h1>GetAllSalary</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SalaryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Month)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HRGenerated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminApproved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BasicSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtherAllowence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TDS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalMonthDays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalLeaves)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinalSalary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalaryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HRGenerated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdminApproved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasicSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HRA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DA)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.OtherAllowence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TDS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMonthDays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalLeaves)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalSalary)
+            </td>
+            <td>
+                    @Html.ActionLink("ApproveSalary", "ApproveSalary", new { id=item.SalaryId }) |
+                @Html.ActionLink("RejectSalary", "RejectSalary", new { id=item }) |
+          
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

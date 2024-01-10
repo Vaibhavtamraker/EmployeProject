@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Domain.Leaves>
+
+@{
+    ViewData["Title"] = "GetLeaveHistory";
+}
+
+<h1>GetLeaveHistory</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+         
+        </tr>
+}
+    </tbody>
+
+</table>

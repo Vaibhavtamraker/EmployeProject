@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EmployeeManagement.Models.Domain.Leaves>
+
+@{
+    ViewData["Title"] = "GetAllPendingLeave";
+}
+
+<h1>GetAllPendingLeave</h1>
+
+<p>
+    <a asp-action="Index"> Back</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeaveStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaveStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                    @Html.ActionLink("ApproveLeave", "ApproveLeave", new { id=item.LeaveId }) |
+                    @Html.ActionLink("RejectLeave", "RejectLeave", new {  id=item.LeaveId }) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
